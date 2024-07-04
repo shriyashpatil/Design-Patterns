@@ -1,12 +1,37 @@
+
+
+/*
+ *  Builder Deisgn Pattern - Creational Design Pattern
+ *  
+ *  Use cases : 
+ *  
+ *  1. When there are lots of attributes in the class. And we ends up with multiple overloading of constructors. Where method signature can cause ambiguity
+ *
+ *  2. When we require validation of attributes, Validate the values before creation of object
+ *  
+ */
+
+
+
 public class Student {
 
     private String name;
     private Integer age;
+    
+
     private String universityName;
+   
+
     private Double cgpa;
+   
+
     private String phonenumber;
+    
+
     private String address;
 
+
+    
 
     private Student(StudentBuilder studentBuilder ){
 
@@ -20,6 +45,26 @@ public class Student {
 
     public String getName(){
         return this.name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public Double getCgpa() {
+        return cgpa;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     static StudentBuilder getBuilder(){
