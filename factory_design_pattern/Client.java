@@ -4,13 +4,13 @@ public class Client {
 
         Xpressbees xb = new Xpressbees();
 
-        PayContract amazonPayContract = xb.getFactory("Amazon").getPayContract();
+        PayContract amazonPayContract = xb.getFactory(EcommClient.Amazon).getPayContract();
         amazonPayContract.display();
 
-        PayContract meeshoPayContract = xb.getFactory("Meesho").getPayContract();
+        PayContract meeshoPayContract = xb.getFactory(EcommClient.Meesho).getPayContract();
         meeshoPayContract.display();
 
-        PayContract myntraPayContract = xb.getFactory("Myntra").getPayContract();
+        PayContract myntraPayContract = xb.getFactory(EcommClient.Myntra).getPayContract();
         myntraPayContract.display();
 
 

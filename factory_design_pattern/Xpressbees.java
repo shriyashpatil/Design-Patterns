@@ -4,12 +4,12 @@ public class Xpressbees{
         System.out.println("delivering the package");
     }
 
-    public XpressbeesFactory getFactory(String client){
+    public XpressbeesFactory getFactory(EcommClient client){
 
-        if(client.equals("Amazon")){
+        if(client.equals(EcommClient.Amazon)){
             return new AmazonFactory();
         }
-        else if(client.equals("Meesho")){
+        else if(client.equals(EcommClient.Meesho)){
             return new MeeshoFactory();
         }
         else{
